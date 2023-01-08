@@ -1,0 +1,6 @@
+﻿  Window.cpp
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(48,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(59,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(73,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(74,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  ParticleSimulation.vcxproj -> C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\x64\Debug\ParticleSimulation.exe
