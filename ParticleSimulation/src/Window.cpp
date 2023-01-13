@@ -29,10 +29,12 @@ namespace ParticleSimulationEngine
 
 	void Window::Init(const char* windowName)
 	{
-		_window = SDL_CreateWindow(windowName, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+		window = SDL_CreateWindow(windowName, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 								   ScreenWidth, ScreenHeight, SDL_WINDOW_SHOWN);
 
-		_renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_PRESENTVSYNC);
+		glContext = SDL_GL_CreateContext(window);
+
+		_renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
 		_texture = SDL_CreateTexture(_renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STATIC, ScreenWidth, ScreenHeight);
 
 		_buffer = new Uint32[ScreenWidth * ScreenHeight];
@@ -44,8 +46,6 @@ namespace ParticleSimulationEngine
 	void Window::Loop()
 	{
 		Stack stack;
-
-		const float scale = 1.15;
 
 		while (_windowState != WindowStates::Exit)
 		{
@@ -61,17 +61,17 @@ namespace ParticleSimulationEngine
 			Point cursorPos = MouseHelper::GetCursorPos();
 
 			const Particle* const particles = stack.GetParticles();
-
-			unsigned char red = static_cast<unsigned char>((1 + sin(elapsedTime * 0.0005)) * 128);
-			unsigned char green = static_cast<unsigned char>((1 + sin(elapsedTime * 0.0003)) * 128);
-			unsigned char blue = static_cast<unsigned char>((1 + sin(elapsedTime * 0.0007)) * 128);
+			
+			unsigned char red = static_cast<unsigned char>((1 + cos(elapsedTime * 0.0005)) * 128);
+			unsigned char green = static_cast<unsigned char>((1 + cos(elapsedTime * 0.0003)) * 128);
+			unsigned char blue = static_cast<unsigned char>((1 + cos(elapsedTime * 0.0007)) * 128);
 
 			for (int i = 0; i <= Stack::ParticleCount; i++)
 			{
 				Particle particleToMove = particles[i];
 
-				int x = (particleToMove.position.x + 8 / (8 * scale)) * (ScreenWidth / (2 / scale));
-				int y = (particleToMove.position.y * (ScreenWidth / (2 / scale))) + ScreenHeight / 2;
+				int x = (particleToMove.position.x + 8 / (8 * Window::ParticleRingScale)) * (ScreenWidth / (2 / Window::ParticleRingScale));
+				int y = (particleToMove.position.y * (ScreenWidth / (2 / Window::ParticleRingScale))) + ScreenHeight / 2;
 
 				SetPixel(x, y, red, green, blue);
 			}
@@ -167,7 +167,7 @@ namespace ParticleSimulationEngine
 	void Window::DestroyRenderer()
 	{
 		SDL_DestroyRenderer(_renderer);
-		SDL_DestroyWindow(_window);
+		SDL_DestroyWindow(window);
 	}
 
 	void Window::DestroyTexture()

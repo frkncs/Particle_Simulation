@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SDL.h>
 #include "Window.h"
+
 #undef main
 
 using namespace ParticleSimulationEngine;
@@ -9,8 +10,15 @@ using namespace std;
 
 int main()
 {
-	Window window;
-	window.Run();
+    /* TODO 's
+    * Screen freezing while dragging (particles still moving and all calculations are fucked up)
+    * Make window resizable
+    * Add UI
+    * Change scale and other values via UI
+    */
+
+    Window window;
+    window.Run();
 
 	return 0;
 }

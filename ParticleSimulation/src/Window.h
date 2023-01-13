@@ -16,10 +16,13 @@ namespace ParticleSimulationEngine
 	class Window
 	{
 	public:
+		SDL_Window* window;
+		SDL_GLContext glContext;
 		static const int ScreenWidth = 1024;
 		static const int ScreenHeight = 800;
+		float ParticleRingScale = 1.15;
+
 	private:
-		SDL_Window* _window;
 		SDL_Renderer* _renderer;
 		SDL_Texture* _texture;
 
@@ -28,7 +31,7 @@ namespace ParticleSimulationEngine
 		WindowStates _windowState;
 
 	public:
-		Window() :_window(NULL), _renderer(NULL), _texture(NULL), _windowState(WindowStates::Play),
+		Window() :window(NULL), glContext(NULL), _renderer(NULL), _texture(NULL), _windowState(WindowStates::Play),
 			_buffer(NULL), _newBuffer(NULL)
 		{
 		};
