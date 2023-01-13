@@ -35,19 +35,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Window.h">
+    <ClInclude Include="src\Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\MouseHelper.h">
+    <ClInclude Include="src\MouseHelper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Stack.h">
+    <ClInclude Include="src\Stack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Particle.h">
+    <ClInclude Include="src\Particle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Vector2.h">
+    <ClInclude Include="src\Vector2.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

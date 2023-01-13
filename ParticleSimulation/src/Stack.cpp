@@ -1,5 +1,5 @@
-#include "Stack.h"
-#include "Particle.h"
+#include "Stack.hpp"
+#include "Particle.hpp"
 
 Stack::Stack() : _lastTime(0)
 {

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <SDL.h>
-#include "Window.h"
+#include "Window.hpp"
 
 #undef main
 

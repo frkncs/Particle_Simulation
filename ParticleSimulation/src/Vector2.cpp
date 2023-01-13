@@ -1,4 +1,4 @@
-#include "Vector2.h"
+#include "Vector2.hpp"
 
 double Vector2::Length() const
 {

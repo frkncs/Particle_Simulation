@@ -1,3 +1,12 @@
-﻿  main.cpp
-C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.h(23,9): warning C4305: 'initializing': truncation from 'double' to 'float'
+﻿  Particle.cpp
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Particle.cpp(15,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Particle.cpp(25,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Stack.cpp
+  Vector2.cpp
+  Window.cpp
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.hpp(23,9): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(59,14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(73,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\ParticleSimulation\src\Window.cpp(74,11): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
   ParticleSimulation.vcxproj -> C:\Users\hesap\Projects\CPP\Projects\Particle_Simulation\x64\Debug\ParticleSimulation.exe

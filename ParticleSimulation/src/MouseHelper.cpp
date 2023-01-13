@@ -1,4 +1,4 @@
-#include "MouseHelper.h"
+#include "MouseHelper.hpp"
 #include <SDL.h>
 
 Point MouseHelper::GetCursorPos()

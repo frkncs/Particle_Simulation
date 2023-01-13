@@ -1,4 +1,4 @@
-#include "Particle.h"
+#include "Particle.hpp"
 
 #define M_PI 3.1415
 

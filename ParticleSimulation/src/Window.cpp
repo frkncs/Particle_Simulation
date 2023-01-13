@@ -1,9 +1,9 @@
 #include <iostream>
 #include <Windows.h>
 #include <SDL.h>
-#include "Window.h"
-#include "MouseHelper.h"
-#include "Stack.h"
+#include "Window.hpp"
+#include "MouseHelper.hpp"
+#include "Stack.hpp"
 
 using namespace std;
 

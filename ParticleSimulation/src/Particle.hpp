@@ -3,7 +3,7 @@
 #ifndef PARTICLE_H_INCLUDED
 #define PARTICLE_H_INCLUDED
 
-#include "Vector2.h"
+#include "Vector2.hpp"
 
 struct Particle
 {
